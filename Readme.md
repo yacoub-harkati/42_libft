@@ -108,4 +108,3 @@ Should you wish to put your code or your personalized libft to the test, i got s
 - @jtoy's [Libftest](https://github.com/jtoty/Libftest)
 
 Feel free to explore these resources and follow the instructions on their repositories. (Psst... remember, this code isn't about handing out answers; it's all about empowering you to learn, solve problems, and craft your own functions! 🧠💻)
-# Libft-1337
