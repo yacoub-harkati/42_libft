@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 22:41:24 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/09/17 22:41:24 by yaharkat         ###   ########.fr       */
+/*   Created: 2023/09/18 20:30:37 by yaharkat          #+#    #+#             */
+/*   Updated: 2023/09/18 20:30:37 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char *ft_strdup(const char *s)
+int ft_isspace(int c)
 {
-	char *d;
-	int i;
-
-	i = 0;
-	d = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (d == NULL)
-		return (NULL);
-	while (s[i])
-	{
-		d[i] = s[i];
-		i++;
-	}
-	d[i] = '\0';
-	return (d);
+	if ((c >= 9 && c <= 13) || c == 32)
+		return (1);
+	return (0);
 }

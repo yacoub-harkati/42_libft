@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int ft_atoi(const char *nptr)
 {
 	int res;
@@ -19,9 +21,9 @@ int ft_atoi(const char *nptr)
 	res = 0;
 	sign = 1;
 	i = 0;
-	while (nptr[i] >= 9 && nptr[i] <= 13)
+	while (ft_isspace(nptr[i]))
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '-')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
 		if (nptr[i] == '-')
 			sign *= -1;
