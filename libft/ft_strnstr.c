@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 20:32:24 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/09/18 20:32:24 by yaharkat         ###   ########.fr       */
+/*   Created: 2023/09/22 03:28:21 by yaharkat          #+#    #+#             */
+/*   Updated: 2023/09/22 03:28:21 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char *ft_strcat(char *dest, const char *src)
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int dest_len;
-	int i;
+	size_t i;
+	size_t j;
 
 	i = 0;
-	dest_len = ft_strlen(dest);
-	while (src[i])
+	if (needle == NULL)
+		return ((char *)haystack);
+	while (haystack[i] && i < len)
 	{
-		dest[dest_len + i] = src[i];
+		j = 0;
+		if (haystack[i] == needle[j])
+		{
+			while (haystack[i + j] == needle[j] && needle[j] && len > (i + j))
+				j++;
+			if (needle[j] == '\0')
+				return ((char *)&haystack[i]);
+		}
 		i++;
 	}
-	dest[dest_len + i] = '\0';
-	return (dest);
+	return (NULL);
 }

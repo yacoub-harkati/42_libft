@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 20:32:24 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/09/18 20:32:24 by yaharkat         ###   ########.fr       */
+/*   Created: 2023/09/22 02:27:11 by yaharkat          #+#    #+#             */
+/*   Updated: 2023/09/22 02:27:11 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char *ft_strcat(char *dest, const char *src)
+void *ft_memset(void *s, int c, size_t n)
 {
-	int dest_len;
-	int i;
+	size_t i;
+	unsigned char *temp_s;
 
+	temp_s = (unsigned char *)s;
 	i = 0;
-	dest_len = ft_strlen(dest);
-	while (src[i])
-	{
-		dest[dest_len + i] = src[i];
-		i++;
-	}
-	dest[dest_len + i] = '\0';
-	return (dest);
+	while (i < n)
+		temp_s[i++] = c;
+	return s;
 }

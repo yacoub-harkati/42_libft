@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char *ft_strncpy(char *dest, const char *src, size_t n)
 {
@@ -27,5 +27,5 @@ char *ft_strncpy(char *dest, const char *src, size_t n)
 		dest[i] = 0;
 		i++;
 	}
-	retunr(dest);
+	return (dest);
 }
