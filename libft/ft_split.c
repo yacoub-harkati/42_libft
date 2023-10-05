@@ -68,7 +68,6 @@ static char **split_w(char **strs, char const *s, char c)
 		words_cpd++;
 		i += w_len;
 	}
-	strs[words_cpd] = NULL;
 	return strs;
 }
 
@@ -81,8 +80,9 @@ char **ft_split(char const *s, char c)
 	strs = (char **)malloc(sizeof(char *) * (words_count + 1));
 	if (!strs)
 		return NULL;
-	strs = split_w(strs, s, c);
+	split_w(strs, s, c);
 	if (!strs)
 		return NULL;
+	strs[words_count] = NULL;
 	return (strs);
 }
