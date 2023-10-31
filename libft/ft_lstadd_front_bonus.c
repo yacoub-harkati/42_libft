@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:56:43 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 17:02:21 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:08:58 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	*lst = new;
+	if (lst)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
