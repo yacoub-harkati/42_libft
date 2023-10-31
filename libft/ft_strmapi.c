@@ -13,7 +13,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return NULL;
 	while (s[i])
 	{
-		buffer[i] == f(i, s[i]);
+		buffer[i] = f(i, s[i]);
 		i++;
 	}
 	buffer[i] = '\0';
