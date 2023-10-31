@@ -6,16 +6,16 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 10:40:42 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 10:40:42 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/10/31 17:01:53 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *temp_buffer;
-	size_t i;
+	unsigned char	*temp_buffer;
+	size_t			i;
 
 	i = 0;
 	temp_buffer = (unsigned char *)s;

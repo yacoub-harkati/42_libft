@@ -1,10 +1,10 @@
 #include "libft.h"
 
-static size_t ft_cword(char const *s, char c)
+static size_t	ft_cword(char const *s, char c)
 {
-	size_t i;
-	size_t old_i;
-	size_t count;
+	size_t	i;
+	size_t	old_i;
+	size_t	count;
 
 	i = 0;
 	old_i = 0;
@@ -19,12 +19,12 @@ static size_t ft_cword(char const *s, char c)
 		if (old_i < i++)
 			count++;
 	}
-	return count;
+	return (count);
 }
 
-static size_t compute_word_len(char const *s, char c)
+static size_t	compute_word_len(char const *s, char c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] && s[i] != c)
@@ -32,9 +32,9 @@ static size_t compute_word_len(char const *s, char c)
 	return (i);
 }
 
-static void free_strs(char **strs, size_t size)
+static void	free_strs(char **strs, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < size)
@@ -45,11 +45,11 @@ static void free_strs(char **strs, size_t size)
 	free(strs);
 }
 
-static char **split_w(char **strs, char const *s, char c)
+static char	**split_w(char **strs, char const *s, char c)
 {
-	size_t i;
-	size_t w_len;
-	size_t words_cpd;
+	size_t	i;
+	size_t	w_len;
+	size_t	words_cpd;
 
 	i = 0;
 	words_cpd = 0;
@@ -62,16 +62,16 @@ static char **split_w(char **strs, char const *s, char c)
 		if (!strs[words_cpd])
 		{
 			free_strs(strs, words_cpd);
-			return NULL;
+			return (NULL);
 		}
 		ft_strlcpy(strs[words_cpd], s + i, (w_len + 1));
 		words_cpd++;
 		i += w_len;
 	}
-	return strs;
+	return (strs);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char **strs;
 	size_t words_count;
@@ -79,10 +79,10 @@ char **ft_split(char const *s, char c)
 	words_count = ft_cword(s, c);
 	strs = (char **)malloc(sizeof(char *) * (words_count + 1));
 	if (!strs)
-		return NULL;
+		return (NULL);
 	split_w(strs, s, c);
 	if (!strs)
-		return NULL;
+		return (NULL);
 	strs[words_count] = NULL;
 	return (strs);
 }
