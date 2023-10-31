@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:32:39 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 11:33:01 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:14:48 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t len;
-	char *dest;
+	size_t	len;
+	char	*dest;
 
 	len = ft_strlen(s);
 	dest = (char *)malloc(sizeof(char) * (len + 1));

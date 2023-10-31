@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:48:00 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 18:03:40 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:22:25 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *head;
-	t_list *new;
+	t_list	*head;
+	t_list	*new;
 
 	head = NULL;
 	while (lst)

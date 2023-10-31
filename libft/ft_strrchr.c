@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 10:48:21 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 10:48:21 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:23:00 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strrchr(const char *s, int c)
 
 	s_len = ft_strlen(s);
 	if (s[s_len] == c)
-		return (char *)(s + s_len);
+		return ((char *)(s + s_len));
 	while (s_len--)
 	{
 		if (s[s_len] == c)
-			return (char *)(s + s_len);
+			return ((char *)(s + s_len));
 	}
 	return (NULL);
 }

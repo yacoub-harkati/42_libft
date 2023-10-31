@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 10:50:58 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 10:50:59 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:23:44 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *t_s1;
-	unsigned char *t_s2;
-	size_t i;
+	unsigned char	*t_s1;
+	unsigned char	*t_s2;
+	size_t			i;
 
 	i = 0;
 	t_s1 = (unsigned char *)s1;

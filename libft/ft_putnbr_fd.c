@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:00:18 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 17:00:19 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:15:34 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ void	ft_putnbr_fd(int n, int fd)
 		return ;
 	}
 	else if (n == 0)
-	{
 		ft_putchar_fd('0', fd);
-	}
 	else
 	{
 		if (n < 0)

@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 10:56:21 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 10:56:21 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:24:48 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (!*little)
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (big[i + j] == little[j] && (i + j) < len)
 		{
 			if (little[j + 1] == '\0')
-				return (char *)(big + i);
+				return ((char *)(big + i));
 			j++;
 		}
 		i++;

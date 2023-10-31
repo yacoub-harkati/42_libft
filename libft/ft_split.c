@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/31 18:16:20 by yaharkat          #+#    #+#             */
+/*   Updated: 2023/10/31 18:16:56 by yaharkat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	ft_cword(char const *s, char c)
@@ -73,8 +85,8 @@ static char	**split_w(char **strs, char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **strs;
-	size_t words_count;
+	char	**strs;
+	size_t	words_count;
 
 	words_count = ft_cword(s, c);
 	strs = (char **)malloc(sizeof(char *) * (words_count + 1));
