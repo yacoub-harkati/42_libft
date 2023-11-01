@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:16:20 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/01 16:50:51 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/02 00:57:29 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	free_strs(char **strs, size_t size)
 	free(strs);
 }
 
-static char	**split_w(char **strs, char const *s, char c)
+static char **split_w(char **strs, char const *s, char c)
 {
 	size_t	i;
 	size_t	w_len;
@@ -88,13 +88,14 @@ char	**ft_split(char const *s, char c)
 	char	**strs;
 	size_t	words_count;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	words_count = ft_cword(s, c);
+	
 	strs = (char **)malloc(sizeof(char *) * (words_count + 1));
 	if (!strs)
 		return (NULL);
-	split_w(strs, s, c);
+	strs = split_w(strs, s, c);
 	if (!strs)
 		return (NULL);
 	strs[words_count] = NULL;
