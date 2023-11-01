@@ -1,28 +1,21 @@
-
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdint.h>
+#include "libft.h"
 
-char **ft_split(char const *s, char c);
+
+void	*ft_calloc(size_t nmemb, size_t size);
+char				**ft_split(char const *s, char c);
+
 
 int main(void)
 {
+	char **s;
 
-	char s[] = "     ";
-	char charset = ' ';
-	char **strs;
-	strs = ft_split(s, charset);
-	int i = 0;
-	while (1)
-	{
-		if (strs[i] == NULL)
-		{
-			printf("NULL");
-			break;
-		}
-		printf("%s\n", strs[i]);
-		i++;
-	}
-	system("leak a.out");
+	// s = ft_calloc(SIZE_MAX, SIZE_MAX);
+	s = ft_split("  tripouille  42  ", ' ');
+
+	// ft_strlcpy(s, "yacoub", 6);
+	printf("%d\n", *s[2]);
+	printf("%s\n", "\0");
 	return 0;
 }
