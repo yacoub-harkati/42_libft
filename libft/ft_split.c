@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:16:20 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 18:16:56 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:50:51 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,8 @@ char	**ft_split(char const *s, char c)
 	char	**strs;
 	size_t	words_count;
 
+	if (s == NULL)
+		return (NULL);
 	words_count = ft_cword(s, c);
 	strs = (char **)malloc(sizeof(char *) * (words_count + 1));
 	if (!strs)

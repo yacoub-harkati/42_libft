@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:26:40 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 18:26:46 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:35:49 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (start >= ft_strlen(s))
 	{
-		sub = (char *)malloc(1);
+		sub = (char *)malloc(sizeof(char));
 		if (!sub)
 			return (NULL);
 		*sub = 0;
