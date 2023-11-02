@@ -6,91 +6,91 @@ For a more comprehensive breakdown of this project, please consult the Subject.p
 
 ## Contents 📜
 
-### Libc functions
-- ft_memset
-- ft_bzero
-- ft_memcpy
-- ft_memccpy
-- ft_memmove
-- ft_memchr
-- ft_memcmp
-- ft_strlen
-- ft_strdup
-- ft_strcpy
-- ft_strncpy
-- ft_strcat
-- ft_strlcat
-- ft_strchr
-- ft_strrchr
-- ft_strstr
-- ft_strnstr
-- ft_strcmp
-- ft_strncmp
-- ft_atoi
-- ft_isalpha
-- ft_isdigit
+## Standard Library Functions (Lib Functions):
+
 - ft_isalnum
+- ft_isalpha
 - ft_isascii
+- ft_isdigit
 - ft_isprint
 - ft_toupper
 - ft_tolower
-
-### Additional Functions
-- ft_memalloc
-- ft_memdel
-- ft_strnew
-- ft_strdel
-- ft_strclr
-- ft_striter
-- ft_striteri
-- ft_strmap
-- ft_strmapi
-- ft_strequ
-- ft_strnequ
-- ft_strsub
+- ft_strlen
+- ft_strchr
+- ft_strrchr
+- ft_strncmp
+- ft_strnstr
 - ft_strjoin
+- ft_strlcat
+- ft_strlcpy
+- ft_bzero
+- ft_memset
+- ft_memcpy
+- ft_memmove
+- ft_memchr
+- ft_memcmp
+- ft_calloc
+- ft_substr
+- ft_strdup
 - ft_strtrim
-- ft_strsplit
+- ft_split
 - ft_itoa
-- ft_putchar
-- ft_putstr
-- ft_putendl
-- ft_putnbr
+- ft_strmapi
+- ft_striteri
 - ft_putchar_fd
 - ft_putstr_fd
 - ft_putendl_fd
 - ft_putnbr_fd
+- ft_atoi
 
-### Bonus Functions
-- ft_lstnew
-- ft_lstdelone
-- ft_lstdel
-- ft_lstadd
-- ft_lstiter
-- ft_lstmap
+Certainly! Here's a separation of the functions into three categories: standard library functions, linked list functions (lst functions), and user-defined (made-up) functions that are not part of the C standard library:
 
-### Personal Functions
-- ft_swap
-- ft_strrev
-- ft_quicksort
-- ft_pow
-- ft_min
-- ft_max
-- ft_isspace
-- ft_isupper
-- ft_islower
-- ft_intlen
-- ft_putnbrtab
-- ft_word_count
-- ft_lstappend
-- ft_strshorten
-- ft_strcutuntil
-- get_next_line
-- ft_abs
-- ft_lstlen
-- ft_putnbr_w.c
-- ft_putstr_w.c
-- ft_swapstr.c
+## Standard Library Functions (Lib Functions):
+1. ft_isalnum
+2. ft_isalpha
+3. ft_isascii
+4. ft_isdigit
+5. ft_isprint
+6. ft_toupper
+7. ft_tolower
+8. ft_strlen
+9. ft_strchr
+10. ft_strrchr
+11. ft_strncmp
+12. ft_strnstr
+13. ft_strjoin
+14. ft_strlcat
+15. ft_strlcpy
+16. ft_bzero
+17. ft_memset
+18. ft_memcpy
+19. ft_memmove
+20. ft_memchr
+21. ft_memcmp
+22. ft_calloc
+23. ft_substr
+24. ft_strdup
+25. ft_strtrim
+26. ft_split
+27. ft_itoa
+28. ft_strmapi
+29. ft_striteri
+30. ft_putchar_fd
+31. ft_putstr_fd
+32. ft_putendl_fd
+33. ft_putnbr_fd
+34. ft_atoi
+
+## Bonus Functions (lst Functions):
+35. ft_lstnew
+36. ft_lstadd_front
+37. ft_lstsize
+38. ft_lstlast
+39. ft_lstadd_back
+40. ft_lstdelone
+41. ft_lstclear
+42. ft_lstiter
+43. ft_lstmap
 
 # How to Use 🛠️
 

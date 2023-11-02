@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:21:40 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 18:21:41 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/02 12:14:37 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = find_start(s1, set);
 	end = find_end(s1, set, start);
-	if (start > end)
+	if (start > end || !*s1)
 	{
 		buffer = (char *)malloc(1);
 		if (!buffer)
