@@ -6,46 +6,7 @@ For a more comprehensive breakdown of this project, please consult the Subject.p
 
 ## Contents 📜
 
-## Standard Library Functions (Lib Functions):
-
-- ft_isalnum
-- ft_isalpha
-- ft_isascii
-- ft_isdigit
-- ft_isprint
-- ft_toupper
-- ft_tolower
-- ft_strlen
-- ft_strchr
-- ft_strrchr
-- ft_strncmp
-- ft_strnstr
-- ft_strjoin
-- ft_strlcat
-- ft_strlcpy
-- ft_bzero
-- ft_memset
-- ft_memcpy
-- ft_memmove
-- ft_memchr
-- ft_memcmp
-- ft_calloc
-- ft_substr
-- ft_strdup
-- ft_strtrim
-- ft_split
-- ft_itoa
-- ft_strmapi
-- ft_striteri
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
-- ft_atoi
-
-Certainly! Here's a separation of the functions into three categories: standard library functions, linked list functions (lst functions), and user-defined (made-up) functions that are not part of the C standard library:
-
-## Standard Library Functions (Lib Functions):
+### Standard Library Functions (Lib Functions):
 1. ft_isalnum
 2. ft_isalpha
 3. ft_isascii
@@ -81,7 +42,7 @@ Certainly! Here's a separation of the functions into three categories: standard 
 33. ft_putnbr_fd
 34. ft_atoi
 
-## Bonus Functions (lst Functions):
+### Bonus Functions (lst Functions):
 35. ft_lstnew
 36. ft_lstadd_front
 37. ft_lstsize
