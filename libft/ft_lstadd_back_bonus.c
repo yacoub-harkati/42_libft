@@ -6,11 +6,11 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:07:50 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/02 15:02:04 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/02 20:03:44 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
