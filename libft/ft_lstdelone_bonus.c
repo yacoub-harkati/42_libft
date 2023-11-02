@@ -6,11 +6,11 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:17:58 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 18:15:16 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:02:18 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

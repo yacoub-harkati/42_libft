@@ -6,11 +6,11 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:06:52 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 18:14:22 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:02:34 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 int	ft_lstsize(t_list *lst)
 {
