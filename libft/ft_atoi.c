@@ -6,16 +6,25 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:00:20 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/02 20:01:46 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:06:34 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	check_valid_number(size_t number, int sign)
+{
+	if (number > 2147483647 && sign > 0)
+		return (-1);
+	else if (number > 2147483648 && sign < 0)
+		return (0);
+	return (1);
+}
+
 int	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	int		number;
+	size_t	number;
 	int		sign;
 
 	i = 0;
@@ -31,8 +40,9 @@ int	ft_atoi(const char *nptr)
 	}
 	while (ft_isdigit(nptr[i]))
 	{
-		number = number * 10 + nptr[i] - 48;
-		i++;
+		number = number * 10 + nptr[i++] - 48;
+		if (check_valid_number(number, sign) <= 0)
+			return (check_valid_number(number, sign));
 	}
 	return (number * sign);
 }
