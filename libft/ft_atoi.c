@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:00:20 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/03 01:06:34 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:17:02 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 static int	check_valid_number(size_t number, int sign)
 {
-	if (number > 2147483647 && sign > 0)
+	if (number > LLONG_MAX && sign > 0)
 		return (-1);
-	else if (number > 2147483648 && sign < 0)
+	else if (number > LLONG_MAX && sign < 0)
 		return (0);
 	return (1);
 }
 
 int	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	size_t	number;
-	int		sign;
+	size_t				i;
+	unsigned long long	number;
+	int					sign;
 
 	i = 0;
 	sign = 1;

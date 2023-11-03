@@ -6,13 +6,14 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:11:22 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/02 20:04:24 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:19:11 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
 

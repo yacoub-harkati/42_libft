@@ -8,7 +8,13 @@
 		"*.css.liquid": "liquid-css",
 		"*.scss.liquid": "liquid-scss",
 		"*.c": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"climits": "c",
+		"unistd.h": "c",
+		"limits.h": "c"
 	},
+	"[c]": {
+        "editor.defaultFormatter": "keyhr.42-c-format"
+    },
 	"C_Cpp.errorSquiggles": "disabled"
 }
