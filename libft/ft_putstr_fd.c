@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:00:21 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/02 18:34:55 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/05 11:32:30 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	if (s)
-	{
-		while (s[i])
-		{
-			ft_putchar_fd(s[i], fd);
-			i++;
-		}
-	}
+	write(fd, s, ft_strlen(s));
 }
