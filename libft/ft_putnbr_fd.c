@@ -3,29 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yaharkat <yaharkat@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:00:18 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 18:15:34 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:30:52 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+static int	compute_len(int n)
 {
-	if (n == -2147483648)
+	int	len;
+
+	len = 0;
+	while (n)
 	{
-		ft_putstr_fd("-2147483648", fd);
-		return ;
+		n /= 10;
+		len++;
 	}
+	return (len);
+}
+
+int	ft_putnbr_fd(int n, int fd)
+{
+	int	sign;
+
+	sign = 0;
+	if (n == INT_MIN)
+		return (ft_putstr_fd("-2147483648", fd));
 	else if (n == 0)
-		ft_putchar_fd('0', fd);
+		return (ft_putchar_fd('0', fd));
 	else
 	{
 		if (n < 0)
 		{
-			ft_putchar_fd('-', fd);
+			sign = ft_putchar_fd('-', fd);
 			n = -n;
 		}
 		if (n < 10)
@@ -38,4 +51,5 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putchar_fd((n % 10) + 48, fd);
 		}
 	}
+	return (compute_len(n) + sign);
 }

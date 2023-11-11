@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yaharkat <yaharkat@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 10:43:54 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/10/31 10:43:54 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:33:29 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	d_len = ft_strlen(dst);
 	i = 0;
-	if (dstsize <= d_len)
+	if (dstsize <= d_len || dstsize == 0)
 		return (dstsize + ft_strlen(src));
 	while (src[i] && (i + d_len) < dstsize - 1)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yaharkat <yaharkat@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:11:22 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/03 01:19:11 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:38:33 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 # define LIBFT_H
 
 # include <limits.h>
+# include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
 
+# define HEX "0123456789abcdef"
+# define MHEX "0123456789ABCDEF"
 # define SIZE_MAX 18446744073709551615UL
 
 typedef struct s_list
@@ -25,6 +28,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_printf(const char *s, ...);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
@@ -55,10 +59,10 @@ char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
-void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char *s, int fd);
-void				ft_putendl_fd(char *s, int fd);
-void				ft_putnbr_fd(int n, int fd);
+int					ft_putchar_fd(char c, int fd);
+int					ft_putstr_fd(char *s, int fd);
+int					ft_putendl_fd(char *s, int fd);
+int					ft_putnbr_fd(int n, int fd);
 int					ft_atoi(const char *nptr);
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
