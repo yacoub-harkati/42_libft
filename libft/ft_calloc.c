@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaharkat <yaharkat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yaharkat <yaharkat@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:32:29 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/01 21:57:21 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:24:09 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*buffer;
 
-	if (nmemb == SIZE_MAX || size == SIZE_MAX)
-		return (NULL);
+	if (!nmemb || !size)
+	{
+		nmemb = 1;
+		size = 1;
+	}
 	buffer = malloc(nmemb * size);
-	if (!buffer)
-		return (NULL);
-	ft_bzero(buffer, nmemb * size);
+	if (buffer)
+		ft_bzero(buffer, nmemb * size);
 	return (buffer);
 }
