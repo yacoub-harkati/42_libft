@@ -25,7 +25,7 @@ static int	compute_len(int n)
 	return (len);
 }
 
-static void	gen_char_array(char	*int_str, long number, int len, int sign)
+static void	gen_char_array(char *int_str, long number, int len, int sign)
 {
 	while (number && len--)
 	{

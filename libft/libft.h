@@ -6,7 +6,7 @@
 /*   By: yaharkat <yaharkat@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:11:22 by yaharkat          #+#    #+#             */
-/*   Updated: 2023/11/11 15:38:33 by yaharkat         ###   ########.fr       */
+/*   Updated: 2023/12/02 09:33:11 by yaharkat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,14 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
-
+# include <stdio.h>
 # define HEX "0123456789abcdef"
 # define MHEX "0123456789ABCDEF"
 # define SIZE_MAX 18446744073709551615UL
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 typedef struct s_list
 {
@@ -28,6 +32,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+char				*get_next_line(int fd);
 int					ft_printf(const char *s, ...);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -42,7 +47,7 @@ char				*ft_strrchr(const char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
-char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin(char *s1, char *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 void				ft_bzero(void *s, size_t n);
