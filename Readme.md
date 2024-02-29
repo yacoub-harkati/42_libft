@@ -1,10 +1,10 @@
-# Libft 42 | 1337 🚀
+# Libft 42 | 1337 
 
-Welcome to the thrilling world of the Libft project at 42 school! Here, we embark on a captivating journey to craft our very own library. 🚀📚
+Welcome to the thrilling world of the Libft project at 42 school! Here, we embark on a captivating journey to craft our very own library. 
 
 For a more comprehensive breakdown of this project, please consult the Subject.pdf document.
 
-## Contents 📜
+## Contents 
 
 ### Standard Library Functions (Lib Functions):
 1. ft_isalnum
@@ -53,14 +53,14 @@ For a more comprehensive breakdown of this project, please consult the Subject.p
 42. ft_lstiter
 43. ft_lstmap
 
-# How to Use 🛠️
+# How to Use 🛠
 
 1. Fire up a terminal and navigate to the **Libft** directory.
 2. Invoke the magical **Makefile** using the command **'make'** (and behold, the library emerges as **"libft.a"**).
 3. Incorporate the **"libft.h"** header into your code, and you're all set to employ any libft functions in your project.
 4. Compile your code with the library like a true coding wizard using `gcc -o myExecutable mySource.c libft.a`.
 
-# How to Test 🧪
+# How to Test 
 
 Should you wish to put your code or your personalized libft to the test, i got some fantastic resources for you:
 - @alelievr's [Libft Unit Test](https://github.com/alelievr/libft-unit-test)
@@ -68,4 +68,4 @@ Should you wish to put your code or your personalized libft to the test, i got s
 - @TinfoilPancakes's [libft-testing-tools](https://github.com/TinfoilPancakes/libft-testing-tools)
 - @jtoy's [Libftest](https://github.com/jtoty/Libftest)
 
-Feel free to explore these resources and follow the instructions on their repositories. (Psst... remember, this code isn't about handing out answers; it's all about empowering you to learn, solve problems, and craft your own functions! 🧠💻)
+Feel free to explore these resources and follow the instructions on their repositories. (Psst... remember, this code isn't about handing out answers; it's all about empowering you to learn, solve problems, and craft your own functions!)
